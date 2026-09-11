@@ -1,0 +1,332 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>embodied v3 — the mood and the body</title>
+<style>
+  :root { --bg:#fafafa; --ink:#222; --mute:#888; --line:#ddd; --plum:#8e4b8e; --teal:#1a9c8c; --body:#e07b28; --grey:#999; --warn:#b5651d; --bar:#e8eef5; }
+  body { margin:0; font:13px/1.4 system-ui, sans-serif; color:var(--ink); background:var(--bg); display:flex; height:100vh; overflow:hidden; }
+  #av { flex:0 0 auto; display:flex; flex-direction:column; padding:10px; gap:8px; border-right:1px solid var(--line); background:#fff; overflow:auto; }
+  video { display:block; border-radius:12px; background:#fff; border:1px solid var(--line); }
+  .mono { font:12px/1.5 ui-monospace, Consolas, monospace; color:var(--mute); }
+  .mono b { color:var(--ink); }
+  #why { color:var(--body); }
+  #nodes button { font:11px ui-monospace, Consolas, monospace; padding:2px 6px; margin:2px; border:1px solid var(--line); border-radius:4px; background:#f7f7f7; cursor:pointer; }
+  #mid { flex:0 0 auto; display:flex; flex-direction:column; padding:10px; border-right:1px solid var(--line); background:#fff; overflow:auto; }
+  canvas { display:block; border:1px solid var(--line); border-radius:6px; background:#fff; cursor:grab; touch-action:none; }
+  #legend { display:flex; gap:12px; align-items:center; margin-top:8px; color:var(--mute); font-size:12px; flex-wrap:wrap; }
+  .dot { display:inline-block; width:10px; height:10px; border-radius:50%; vertical-align:middle; margin-right:4px; }
+  #right { flex:1 1 auto; display:flex; flex-direction:column; min-width:360px; }
+  #hdr { padding:8px 12px; border-bottom:1px solid var(--line); display:flex; gap:12px; align-items:center; background:#fff; flex-wrap:wrap; }
+  #hdr label { color:var(--mute); font-size:12px; }
+  #hdr input[type=range] { width:80px; vertical-align:middle; }
+  #status { font-weight:600; color:var(--teal); min-width:60px; }
+  #gauges { padding:6px 12px; border-bottom:1px solid var(--line); background:#fff; display:flex; gap:18px; font-size:12px; color:var(--mute); flex-wrap:wrap; }
+  .gauge { display:flex; align-items:center; gap:8px; }
+  .bar { width:140px; height:10px; background:var(--bar); border-radius:5px; overflow:hidden; border:1px solid var(--line); }
+  .bar i { display:block; height:100%; width:0; background:var(--teal); transition:width .3s; }
+  .bar i.hot { background:var(--warn); }
+  #log { flex:1 1 auto; overflow-y:auto; padding:10px 12px; white-space:pre-wrap; font-family:ui-monospace, Consolas, monospace; font-size:12px; }
+  #log .you { color:var(--ink); font-weight:600; }
+  #log .her { color:#1d4f9c; }
+  #log .emo { color:var(--plum); }
+  #log .mv  { color:var(--body); }
+  #log .rd  { color:var(--mute); }
+  #log .sys { color:var(--warn); }
+  #log .mood{ color:var(--teal); }
+  #log .mem { color:#6b6b2e; }
+  form { display:flex; gap:6px; padding:6px 12px; border-top:1px solid var(--line); background:#fff; align-items:center; }
+  form input[type=text] { flex:1 1 auto; padding:6px 8px; border:1px solid var(--line); border-radius:4px; font:inherit; }
+  form button { padding:6px 12px; border:1px solid var(--line); border-radius:4px; background:#f3f3f3; cursor:pointer; }
+  #reading { max-height:150px; overflow:auto; border-top:1px solid var(--line); padding:6px 12px; font-size:12px; background:#fff; }
+  #reading table { border-collapse:collapse; }
+  #reading td { padding:1px 8px 1px 0; color:var(--mute); }
+  #reading td.t { color:var(--ink); }
+  #reading td.n { text-align:right; font-family:ui-monospace, Consolas, monospace; }
+  #reading .hit0 { opacity:.45; }
+  small { color:var(--mute); }
+  body.nodev #log .emo, body.nodev #log .mv, body.nodev #log .rd, body.nodev #log .mood, body.nodev #log .sys, body.nodev #log .mem,
+  body.nodev #reading, body.nodev #probe, body.nodev #movef, body.nodev #recallf, body.nodev #gauges, body.nodev .devonly { display:none; }
+  body.nodev #log { font-family:system-ui, sans-serif; font-size:14px; }
+</style></head>
+<body>
+<div id="av">
+  <video id="v" autoplay muted playsinline width="448" height="448"></video>
+  <div class="mono">face: <b id="node">–</b> &nbsp; mood nearest: <b id="nearlbl">–</b> <span id="maskv" class="devonly"></span></div>
+  <div class="mono devonly">playing: <span id="playing">-</span></div>
+  <div class="mono devonly">queue: <span id="queue">[]</span></div>
+  <div class="mono devonly" id="why"></div>
+  <div class="mono devonly" id="nodes"></div>
+</div>
+<div id="mid">
+  <canvas id="c" width="520" height="520"></canvas>
+  <div id="legend">
+    <span><span class="dot" style="background:var(--plum)"></span>painted sample</span>
+    <span><span style="display:inline-block; width:14px; border-top:2px solid rgba(142,75,142,.4); vertical-align:middle; margin-right:4px"></span>existing clip</span>
+    <span><span class="dot" style="background:var(--teal)"></span>mood, with trail</span>
+    <span><span class="dot" style="border:2px solid var(--body); width:7px; height:7px"></span>body (face shown)</span>
+    <span class="devonly"><span class="dot" style="border:2px solid var(--teal); width:7px; height:7px"></span>last reading</span>
+    <span class="devonly"><span class="dot" style="border:2px solid var(--grey); width:7px; height:7px"></span>probe</span>
+    <span>drag · wheel · dbl-click</span>
+  </div>
+</div>
+<div id="right">
+  <div id="hdr">
+    <span id="status">connecting</span>
+    <label><input type="checkbox" id="dev" checked> dev</label>
+    <label class="devonly">half-life <input type="range" id="hl" min="10" max="600" step="5" value="120"> <span id="hlv">120 s</span></label>
+    <label class="devonly">nudge <input type="range" id="nudge" min="0" max="1" step="0.05" value="0.5"> <span id="nudgev">0.50</span></label>
+    <label>temp <input type="range" id="temp" min="0" max="1.5" step="0.05" value="0.7"> <span id="tempv">0.70</span></label>
+    <label class="devonly">τ <input type="range" id="tau" min="0" max="1" step="0.01" value="0.7"> <span id="tauv">0.70</span></label>
+    <label class="devonly">budget <input type="range" id="budget" min="0" max="4" step="0.1" value="2"> <span id="budgetv">2.0</span></label>
+    <button id="reset" title="clear history and put the mood back on the baseline">reset</button>
+    <button id="rebuild" class="devonly" title="re-embed clip_descriptions.json">rebuild index</button>
+    <small id="cfg" class="devonly"></small>
+  </div>
+  <div id="gauges">
+    <div class="gauge"><span>context / KV</span><div class="bar"><i id="kvbar"></i></div><span id="kvtxt">no turn yet</span></div>
+    <div class="gauge"><span>VRAM</span><div class="bar"><i id="vrbar"></i></div><span id="vrtxt">–</span></div>
+    <span id="gputxt"></span>
+  </div>
+  <div id="log"></div>
+  <div id="reading"><small>last reading: nothing yet</small></div>
+  <form id="recallf"><input type="text" id="rtext" placeholder="recall: try a query against her memories (no brain)" autocomplete="off"><button>recall</button></form>
+  <form id="movef"><input type="text" id="mtext" placeholder="move: try a physical description against the clip RAG (no brain)" autocomplete="off"><button>match</button></form>
+  <form id="probe"><input type="text" id="ptext" placeholder="probe: score an emotional sentence (no brain)" autocomplete="off">
+    <label title="also nudge the mood with it"><input type="checkbox" id="papply"> apply</label><button>score</button></form>
+  <form id="say"><input type="text" id="text" placeholder="say something" autocomplete="off" autofocus><button>send</button></form>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const log = (cls, text) => { const d = document.createElement('div'); d.className = cls; d.textContent = text; $('log').appendChild(d); $('log').scrollTop = 1e9; };
+const f2 = x => (x == null ? '–' : (x >= 0 ? '+' : '') + (+x).toFixed(2));
+const xyz = p => p ? `(v ${f2(p[0])}, a ${f2(p[1])}, d ${f2(p[2])})` : '–';
+const mb = x => x == null ? '–' : (x >= 1024 ? (x / 1024).toFixed(2) + ' GB' : Math.round(x) + ' MB');
+let clips = {}, nodes = {}, edgePairs = {};
+const lab = n => (nodes[n] && nodes[n].label) || n;
+function buildEdgePairs() {
+  edgePairs = {};
+  for (const id in clips) { const c = clips[id]; if (c.kind !== 'edge' || c.start === c.end) continue; const k = [c.start, c.end].sort().join('|'); edgePairs[k] = [c.start, c.end]; }
+}
+
+// ---------- dev toggle ----------
+function setDev(on) { document.body.classList.toggle('nodev', !on); $('dev').checked = on; try { localStorage.setItem('dev', on ? '1' : '0'); } catch (e) {} }
+try { setDev(localStorage.getItem('dev') !== '0'); } catch (e) { setDev(true); }
+$('dev').onchange = e => setDev(e.target.checked);
+
+// ---------- player: plays a plan, then loops the idle; keeps the true node ----------
+const el = $('v');
+const P = {
+  node: null, queue: [], idle: null,
+  ui() { $('node').textContent = lab(this.node) + ' (' + this.node + ')'; $('queue').textContent = JSON.stringify(this.queue); S.body = this.node; },
+  play(plan, idle) {
+    const busy = !el.loop && !el.paused && !el.ended && el.currentSrc;
+    if (busy) { this.queue.push(...plan); this.idle = idle; this.ui(); return; }
+    this.queue = plan.slice(); this.idle = idle; this.next();
+  },
+  next() {
+    while (this.queue.length && clips[this.queue[0]] && clips[this.queue[0]].start !== this.node) this.queue.shift();
+    if (this.queue.length) {
+      const id = this.queue.shift(); const c = clips[id];
+      el.loop = false; el.src = '/clips/' + encodeURIComponent(c.file); el.play().catch(() => {});
+      this.node = c.end; $('playing').textContent = id;
+    } else if (this.idle && clips[this.idle]) {
+      el.loop = true; el.src = '/clips/' + encodeURIComponent(clips[this.idle].file); el.play().catch(() => {});
+      this.node = clips[this.idle].end; $('playing').textContent = this.idle + ' (loop)';
+      send({ type: 'window', event: 'position', node: this.node });
+    } else {
+      el.loop = false; el.pause(); $('playing').textContent = 'hold ' + this.node;
+      send({ type: 'window', event: 'position', node: this.node });
+    }
+    this.ui();
+  }
+};
+el.addEventListener('ended', () => P.next());
+
+// ---------- state ----------
+let S = { seed: [], L: 1.5, mood: null, moodShown: null, trail: [], target: null, probe: null, body: null, path: null, pathT: 0, baseline: null, rest: null };
+let cam = { yaw: -0.6, pitch: 0.45, zoom: 1 };
+
+// ---------- 3D: x = valence (right), y = arousal (depth), z = dominance (up) ----------
+const cv = $('c'), ctx = cv.getContext('2d');
+function proj(p) {
+  const [x, y, z] = p, cy = Math.cos(cam.yaw), sy = Math.sin(cam.yaw), cp = Math.cos(cam.pitch), sp = Math.sin(cam.pitch);
+  const x1 = x * cy - y * sy, y1 = x * sy + y * cy;
+  const y2 = y1 * cp - z * sp, z2 = y1 * sp + z * cp;
+  const s = (cv.width / 2) / (S.L * 2.1) * cam.zoom;
+  return { x: cv.width / 2 + s * x1, y: cv.height / 2 - s * z2, depth: y2, s };
+}
+function line(a, b, style, width = 1, dash = []) { const A = proj(a), B = proj(b); ctx.save(); ctx.strokeStyle = style; ctx.lineWidth = width; ctx.setLineDash(dash); ctx.beginPath(); ctx.moveTo(A.x, A.y); ctx.lineTo(B.x, B.y); ctx.stroke(); ctx.restore(); }
+function arrow(a, b, style, width) { line(a, b, style, width); const A = proj(a), B = proj(b); const ang = Math.atan2(B.y - A.y, B.x - A.x); ctx.save(); ctx.fillStyle = style; ctx.beginPath(); ctx.moveTo(B.x, B.y); ctx.lineTo(B.x - 9 * Math.cos(ang - 0.4), B.y - 9 * Math.sin(ang - 0.4)); ctx.lineTo(B.x - 9 * Math.cos(ang + 0.4), B.y - 9 * Math.sin(ang + 0.4)); ctx.closePath(); ctx.fill(); ctx.restore(); }
+function dot(p, r, fill, stroke, hollow) { const Pp = proj(p); const rr = r * (1 - 0.12 * Pp.depth / S.L); ctx.beginPath(); ctx.arc(Pp.x, Pp.y, rr, 0, 7); if (!hollow) { ctx.fillStyle = fill; ctx.fill(); } ctx.lineWidth = hollow ? 2.5 : 1.5; ctx.strokeStyle = stroke; ctx.stroke(); return Pp; }
+function text(p, s, color, dx = 8, dy = -8) { const Pp = proj(p); ctx.fillStyle = color; ctx.font = '12px system-ui'; ctx.fillText(s, Pp.x + dx, Pp.y + dy); }
+const dev = () => !document.body.classList.contains('nodev');
+const coordsOf = n => (nodes[n] && nodes[n].coords) || null;
+
+function draw() {
+  const L = S.L; ctx.clearRect(0, 0, cv.width, cv.height);
+  for (let g = -L; g <= L + 1e-9; g += 0.5) { line([g, -L, -L], [g, L, -L], '#eee'); line([-L, g, -L], [L, g, -L], '#eee'); }
+  line([0, -L, -L], [0, L, -L], '#ccc'); line([-L, 0, -L], [L, 0, -L], '#ccc'); line([0, 0, -L], [0, 0, L], '#ddd', 1, [3, 3]);
+  const C = [[-L,-L,-L],[L,-L,-L],[L,L,-L],[-L,L,-L],[-L,-L,L],[L,-L,L],[L,L,L],[-L,L,L]];
+  [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]].forEach(([a, b]) => line(C[a], C[b], '#e4e4e4'));
+  text([L, -L, -L], 'valence → pleasant', '#777', -60, 18); text([-L, -L, -L], 'unpleasant', '#777', -20, 18);
+  text([-L, L, -L], 'arousal → energised', '#777', -70, -6); text([-L, -L, -L], 'calm', '#777', -34, -6);
+  text([-L, -L, L], 'dominance ↑ in control', '#777', -20, -10); text([-L, -L, -L], 'submissive', '#777', 0, 34);
+  // the graph's edges: every clip that goes from one still to another, drawn once per pair, faint and permanent
+  for (const key in edgePairs) { const [a, b] = edgePairs[key]; const A = coordsOf(a), B = coordsOf(b); if (A && B) line(A, B, 'rgba(142,75,142,.22)', 1.2); }
+  // travelled path (fades over ~12 s)
+  if (S.path && S.path.length > 1) {
+    const age = (Date.now() - S.pathT) / 1000, alpha = Math.max(0.15, 1 - age / 12);
+    for (let i = 1; i < S.path.length; i++) { const a = coordsOf(S.path[i - 1]), b = coordsOf(S.path[i]); if (a && b) arrow(a, b, `rgba(224,123,40,${alpha})`, 2); }
+  }
+  const items = [];
+  S.seed.forEach(s => { if (s.coords) items.push({ p: s.coords, kind: 'seed', s }); });
+  if (S.probe && dev()) items.push({ p: S.probe, kind: 'probe' });
+  if (S.target && dev()) items.push({ p: S.target, kind: 'target' });
+  if (S.moodShown) items.push({ p: S.moodShown, kind: 'mood' });
+  items.forEach(it => it.d = proj(it.p).depth); items.sort((a, b) => b.d - a.d);
+  if (S.trail.length > 1) { ctx.save(); for (let i = 1; i < S.trail.length; i++) { const a = proj(S.trail[i - 1].p), b = proj(S.trail[i].p); ctx.strokeStyle = `rgba(26,156,140,${0.15 + 0.7 * i / S.trail.length})`; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); } ctx.restore(); }
+  if (S.target && S.moodShown && dev()) line(S.target, S.moodShown, 'rgba(26,156,140,.5)', 1, [4, 4]);
+  const bodyC = S.body ? coordsOf(S.body) : null;
+  if (bodyC && S.moodShown) line(bodyC, S.moodShown, 'rgba(224,123,40,.6)', 1, [3, 4]);     // the mask: face vs feeling
+  if (S.baseline && S.rest && dev()) {                                                        // temperament: where she settles now vs the rest sample
+    const Pb = proj(S.baseline); ctx.save(); ctx.strokeStyle = 'rgba(26,156,140,.8)'; ctx.lineWidth = 1.5; ctx.beginPath();
+    ctx.moveTo(Pb.x, Pb.y - 6); ctx.lineTo(Pb.x + 6, Pb.y); ctx.lineTo(Pb.x, Pb.y + 6); ctx.lineTo(Pb.x - 6, Pb.y); ctx.closePath(); ctx.stroke(); ctx.restore();
+    text(S.baseline, 'rest', '#1a9c8c', 8, 14);
+    if (Math.hypot(S.baseline[0] - S.rest[0], S.baseline[1] - S.rest[1], S.baseline[2] - S.rest[2]) > 0.05) line(S.rest, S.baseline, 'rgba(26,156,140,.5)', 1, [2, 3]);
+  }
+  items.forEach(it => {
+    const [x, y, z] = it.p;
+    if (it.kind === 'seed') {
+      line([x, y, -L], it.p, '#e9dbe9'); dot(it.p, 6, '#8e4b8e', '#fff'); text(it.p, it.s.label, '#6b3a6b');
+      if (it.s.node === S.body) { dot(it.p, 11, null, '#e07b28', true); text(it.p, 'body', '#e07b28', 10, 18); }
+    }
+    else if (it.kind === 'mood') { line([x, y, -L], it.p, 'rgba(26,156,140,.35)'); dot([x, y, -L], 4, 'rgba(26,156,140,.25)', 'rgba(0,0,0,0)'); dot(it.p, 9, '#1a9c8c', '#fff'); text(it.p, 'mood', '#1a9c8c', 12, 4); }
+    else if (it.kind === 'target') dot(it.p, 7, null, '#1a9c8c', true);
+    else if (it.kind === 'probe') dot(it.p, 7, null, '#999', true);
+  });
+}
+(function anim() {
+  if (S.mood) { if (!S.moodShown) S.moodShown = S.mood.slice(); else S.moodShown = S.moodShown.map((v, i) => v + (S.mood[i] - v) * 0.15); }
+  draw(); requestAnimationFrame(anim);
+})();
+let drag = null;
+cv.addEventListener('pointerdown', e => { drag = { x: e.clientX, y: e.clientY }; cv.setPointerCapture(e.pointerId); cv.style.cursor = 'grabbing'; });
+cv.addEventListener('pointermove', e => { if (!drag) return; cam.yaw += (e.clientX - drag.x) * 0.01; cam.pitch = Math.max(-1.4, Math.min(1.4, cam.pitch + (e.clientY - drag.y) * 0.01)); drag = { x: e.clientX, y: e.clientY }; });
+cv.addEventListener('pointerup', () => { drag = null; cv.style.cursor = 'grab'; });
+cv.addEventListener('wheel', e => { e.preventDefault(); cam.zoom = Math.max(0.5, Math.min(3, cam.zoom * (e.deltaY < 0 ? 1.1 : 0.9))); }, { passive: false });
+cv.addEventListener('dblclick', () => { cam = { yaw: -0.6, pitch: 0.45, zoom: 1 }; });
+function fit() {
+  const h = window.innerHeight - 24, w = window.innerWidth;
+  const vs = Math.max(256, Math.min(512, Math.floor(w * 0.28), Math.floor(h - 140)));
+  el.width = el.height = vs; el.style.width = el.style.height = vs + 'px';
+  const gs = Math.max(320, Math.min(640, Math.floor(w * 0.30), Math.floor(h - 60)));
+  cv.width = cv.height = gs;
+}
+window.addEventListener('resize', fit); fit();
+
+// ---------- websocket ----------
+let ws;
+const send = o => ws && ws.readyState === 1 && ws.send(JSON.stringify(o));
+function connect() {
+  ws = new WebSocket(`ws://${location.host}/ws`);
+  ws.onclose = () => { $('status').textContent = 'disconnected, retrying'; setTimeout(connect, 1500); };
+  ws.onmessage = ev => {
+    const m = JSON.parse(ev.data);
+    if (m.type === 'hello') {
+      clips = m.clips; nodes = m.nodes; S.seed = m.seed; S.L = m.clip; buildEdgePairs();
+      $('nodes').innerHTML = 'go to: ' + Object.keys(nodes).map(n => `<button title="${n}" onclick="send({type:'command',cmd:'goto',node:'${n}'})">${lab(n)}</button>`).join('');
+      P.node = m.pos; P.idle = m.idle; P.next();
+      setMood(m.mood);
+      for (const [id, key, fmt, suf] of [['hl', 'half_life', 0, ' s'], ['nudge', 'nudge', 2, ''], ['temp', 'temperature', 2, ''], ['tau', 'tau', 2, ''], ['budget', 'budget', 1, '']]) {
+        $(id).value = m.config[key]; $(id + 'v').textContent = (+m.config[key]).toFixed(fmt) + suf;
+      }
+      $('cfg').textContent = `${m.config.backend}${m.config.backend === 'qwen' ? ' · ' + m.config.model : ''} · ${Object.keys(clips).length} clips · seed vs hand r: v ${(m.correlation.valence || 0).toFixed(2)}, a ${(m.correlation.arousal || 0).toFixed(2)}`;
+      $('status').textContent = 'idle';
+      log('sys', `seed: ${m.seed.map(s => `${s.label} ${xyz(s.coords)}`).join('\n      ')}`);
+      log('sys', `${m.memories} memories on disk · ${m.history_turns} turns of history restored` + (m.away ? ` · she was switched off ${m.away}` : ''));
+      log('mood', 'mood: ' + m.mood.sentence);
+      if (m.gpu) setGpu(m.gpu);
+    }
+    else if (m.type === 'status') $('status').textContent = m.text;
+    else if (m.type === 'mood') setMood(m);
+    else if (m.type === 'gpu') setGpu(m);
+    else if (m.type === 'reply') {
+      (m.memories || []).forEach(r => log('mem', `remembered (${r.ago}, ${r.when}, sim ${r.similarity.toFixed(2)}, refs ${r.refs}): "${r.user}" → "${r.reply}" · felt: ${r.emotion}`));
+      log('emo', (m.internal ? '(to herself) ' : '') + 'emotion: ' + (m.emotion || '(none)') + (m.parsed ? '' : '   [not JSON: treated as plain reply]'));
+      log('rd', '     ' + describe(m) + (m.nudge != null ? `; nudge ${m.nudge.toFixed(2)}` : '') + (m.sincerity_gap != null ? `; reported vs held ${m.sincerity_gap.toFixed(2)}` : ''));
+      log('mv', 'move: ' + (m.move.description || '(none: drift)'));
+      log('rd', '     ' + describeBody(m.body));
+      log('her', (m.internal ? '(to herself) ' : 'Her: ') + (m.text || '(quiet)'));
+      log('mood', '     mood → ' + xyz(m.mood.point) + '  ' + m.mood.sentence);
+      if (m.coords) { S.target = m.coords; S.trail.push({ p: m.mood.point }); if (S.trail.length > 200) S.trail.shift(); }
+      setMood(m.mood); showReading(m.emotion, m); $('why').textContent = describeBody(m.body);
+    }
+    else if (m.type === 'play') {
+      log('rd', `     body → ${m.end_label} (${m.reason}${m.source === 'tick' ? ', silence' : ''}) [${m.plan.join(' → ')}] ${m.note}`);
+      S.path = m.path; S.pathT = Date.now(); P.play(m.plan, m.idle);
+      if (m.source === 'tick') $('why').textContent = `drift during silence → ${m.end_label}`;
+    }
+    else if (m.type === 'recall') {
+      log('mem', `recall "${m.text}" (${m.count} memories on disk): ${m.memories.length ? '' : 'nothing close enough'}`);
+      m.memories.forEach(r => log('mem', `   ${r.ago} (${r.when}) sim ${r.similarity.toFixed(2)} refs ${r.refs}: "${r.user}" → "${r.reply}" · felt: ${r.emotion}`));
+    }
+    else if (m.type === 'match') { log('rd', `match: "${m.text}"  ${describeBody(m.body)}`); (m.body.hits || []).slice(0, 4).forEach(h => log('rd', `        ${h.similarity.toFixed(4)}  ${(h.label || h.node).padEnd(10)} ${(h.doc || '').slice(0, 70)}`)); }
+    else if (m.type === 'probe') {
+      log('rd', `probe: "${m.text}"  ${describe(m)}${m.applied ? '  (applied to mood)' : ''}`);
+      S.probe = m.coords; if (m.applied) { S.trail.push({ p: m.mood.point }); setMood(m.mood); } showReading(m.text, m);
+    }
+    else if (m.type === 'log') log('sys', m.text);
+  };
+}
+connect();
+document.addEventListener('visibilitychange', () => send({ type: 'window', event: 'visibility', visible: !document.hidden }));
+
+function describe(m) {
+  if (!m.coords) return 'no reading (' + (m.reading ? m.reading.hits + ' hits < min' : 'empty') + ')' + (m.placement_error ? ' placement error: ' + m.placement_error : '');
+  const via = m.method === 'placement' ? `placement (${m.placement.map(p => p.label + ' ' + p.similarity.toFixed(2)).join(', ')})` : `lexicon, ${m.reading.hits} hits`;
+  return `→ ${xyz(m.coords)} via ${via}; nearest sample ${m.target_nearest}`;
+}
+function describeBody(b) {
+  if (!b) return '';
+  const sim = b.similarity != null ? ` sim ${b.similarity.toFixed(3)}` : '';
+  const cost = b.cost != null ? ` cost ${b.cost.toFixed(2)}/${b.budget.toFixed(1)}` : '';
+  const r = b.reason;
+  if (r === 'hit') return `body: HIT → ${b.target_label}${sim}${cost}`;
+  if (r.startsWith('out_of_reach')) return `body: OUT OF REACH (${b.requested_label}${sim}${cost}) → drift to ${b.target_label}`;
+  if (r.startsWith('miss')) return `body: MISS (closest ${b.requested_label}${sim} < τ) → drift to ${b.target_label}`;
+  if (r.startsWith('drift')) return `body: drift → ${b.target_label}${r.endsWith('/stay') ? ' (already there)' : ''}`;
+  return `body: ${r}${b.target_label ? ' → ' + b.target_label : ''}`;
+}
+function setMood(md) {
+  S.mood = md.point; S.baseline = md.baseline || S.baseline; S.rest = md.rest || S.rest;
+  $('nearlbl').textContent = md.nearest_label || '–';
+  $('maskv').textContent = md.mask != null ? `· mask ${md.mask.toFixed(2)}` : '';
+  if (md.body && md.body !== P.node && !P.queue.length && el.loop) { /* server moved without us: trust the player, it reports back */ }
+}
+function setGpu(g) {
+  const kvPct = Math.min(100, 100 * g.context_tokens / g.budget_tokens);
+  $('kvbar').style.width = kvPct + '%'; $('kvbar').className = kvPct > 75 ? 'hot' : '';
+  $('kvtxt').textContent = `${g.context_tokens} / ${g.budget_tokens} tok ≈ ${mb(g.kv_mb)} KV`;
+  if (g.total_mb) {
+    const pct = 100 * g.reserved_mb / g.total_mb;
+    $('vrbar').style.width = Math.min(100, pct) + '%'; $('vrbar').className = pct > 85 ? 'hot' : '';
+    $('vrtxt').textContent = `${mb(g.reserved_mb)} of ${mb(g.total_mb)} (peak ${mb(g.peak_mb)})`;
+  } else { $('vrbar').style.width = '0%'; $('vrtxt').textContent = 'no GPU'; }
+  $('gputxt').textContent = (g.seconds ? `${g.seconds.toFixed(1)} s, ${(g.new_tokens / Math.max(g.seconds, 1e-3)).toFixed(1)} tok/s` : '') + (g.oom_retries ? ` · ${g.oom_retries} OOM retr${g.oom_retries > 1 ? 'ies' : 'y'}` : '');
+}
+function showReading(txt, m) {
+  const r = m.reading; let h = `<small>last reading: "${txt}"  ·  ${m.method}${m.coords ? '  ·  ' + xyz(m.coords) : ''}</small>`;
+  if (r && r.terms.length) h += '<table>' + r.terms.map(t => `<tr class="hit${t.hit ? 1 : 0}"><td class="t">${t.term}</td><td class="n">${f2(t.vec[0])}</td><td class="n">${f2(t.vec[1])}</td><td class="n">${f2(t.vec[2])}</td><td class="n">w ${t.weight.toFixed(2)}</td><td>${t.flags.join(' ')}</td></tr>`).join('') + '</table>';
+  if (m.placement) h += '<small>placement candidates: ' + m.placement.map(p => `${p.label} ${p.similarity.toFixed(3)}`).join(', ') + '</small>';
+  $('reading').innerHTML = h;
+}
+// ---------- controls ----------
+$('say').onsubmit = e => { e.preventDefault(); const t = $('text').value.trim(); if (!t) return; log('you', 'You: ' + t); send({ type: 'user', text: t }); $('text').value = ''; };
+$('probe').onsubmit = e => { e.preventDefault(); const t = $('ptext').value.trim(); if (!t) return; send({ type: 'command', cmd: 'probe', text: t, apply: $('papply').checked }); };
+$('movef').onsubmit = e => { e.preventDefault(); const t = $('mtext').value.trim(); if (!t) return; send({ type: 'command', cmd: 'match', text: t }); };
+$('recallf').onsubmit = e => { e.preventDefault(); const t = $('rtext').value.trim(); if (!t) return; send({ type: 'command', cmd: 'recall', text: t }); };
+$('reset').onclick = () => { send({ type: 'command', cmd: 'reset' }); S.trail = []; S.target = null; S.probe = null; };
+$('rebuild').onclick = () => send({ type: 'command', cmd: 'rebuild_index' });
+for (const [id, key, fmt, suf] of [['hl', 'half_life', 0, ' s'], ['nudge', 'nudge', 2, ''], ['temp', 'temperature', 2, ''], ['tau', 'tau', 2, ''], ['budget', 'budget', 1, '']]) {
+  $(id).oninput = e => { $(id + 'v').textContent = (+e.target.value).toFixed(fmt) + suf; send({ type: 'command', cmd: 'set', [key]: +e.target.value }); };
+}
+</script>
+</body></html>
