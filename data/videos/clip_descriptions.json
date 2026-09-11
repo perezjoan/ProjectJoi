@@ -1,0 +1,746 @@
+{
+ "template": "subject / start expression / motion / end expression / symbols / hands",
+ "note": "Node ids n001.. are permanent; labels are free text. Files: loop__<id>__vN.mp4, edge__<from>__<to>__vN.mp4, act__<id>__<act>__vN.mp4. Clip id = file stem. Kinds: loop | edge | act. Only index_docs are embedded.",
+ "keyframes": [
+  {
+   "node": "n001",
+   "label": "neutral",
+   "file": "n001.png",
+   "valence": 0.0,
+   "arousal": 0.3,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. symbols: none. hands: out of frame.",
+   "aliases": "neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet",
+   "feeling": "calm, quiet, at rest, nothing in particular, unbothered, even, ordinary, waiting, attentive, plain"
+  },
+  {
+   "node": "n002",
+   "label": "angry",
+   "file": "n002.png",
+   "valence": -0.7,
+   "arousal": 0.9,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. expression: brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted. symbols: none. hands: out of frame.",
+   "aliases": "angry, furious, mad, rage, hard stare, jaw set, lips pressed, glare, frustrated, annoyed, grumpy, cross",
+   "feeling": "angry, furious, irritated, indignant, resentful, hostile, fed up, cross"
+  },
+  {
+   "node": "n003",
+   "label": "puzzled",
+   "file": "n003.png",
+   "valence": -0.1,
+   "arousal": 0.5,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. expression: one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching. symbols: none. hands: out of frame.",
+   "aliases": "puzzled, confused, wondering, wonder, ponder, thinking, curious, questioning, unsure, hmm, eyebrow raised, head tilt, doubtful, skeptical, quizzical, narrow the eyes, frown in thought",
+   "feeling": "puzzled, confused, uncertain, curious, doubtful, wondering, unsure, thoughtful"
+  },
+  {
+   "node": "n004",
+   "label": "happy",
+   "file": "n004.png",
+   "valence": 0.7,
+   "arousal": 0.5,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. expression: wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised. symbols: none. hands: out of frame.",
+   "aliases": "happy, smiling, big smile, glad, pleased, cheerful, delighted, warm smile, beaming, grin, joyful, radiant",
+   "feeling": "happy, glad, delighted, joyful, pleased, cheerful, content, warm"
+  },
+  {
+   "node": "n005",
+   "label": "crying",
+   "file": "n005.png",
+   "valence": -0.8,
+   "arousal": 0.7,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. expression: eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered. symbols: none. hands: out of frame.",
+   "aliases": "crying, cry, sob, sobbing, sob loudly, tears, tears roll down, weeping, weep, break down, sad, heartbroken, upset, miserable, tearful, eyes welling up, grief",
+   "feeling": "sad, heartbroken, grieving, miserable, hurt, tearful, sorrowful, despairing"
+  },
+  {
+   "node": "n006",
+   "label": "shocked",
+   "file": "n006.png",
+   "valence": 0.0,
+   "arousal": 0.9,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. expression: eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised. symbols: none. hands: out of frame.",
+   "aliases": "shocked, surprised, startled, gasp, astonished, stunned, wide eyes, mouth open, taken aback, alarmed, jolt",
+   "feeling": "shocked, startled, astonished, alarmed, stunned, surprised, taken aback"
+  },
+  {
+   "node": "n007",
+   "label": "worried",
+   "file": "n007.png",
+   "valence": -0.5,
+   "arousal": 0.5,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. expression: brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in. symbols: none. hands: out of frame.",
+   "aliases": "worried, anxious, nervous, uneasy, uneasy look, nervous glance, concerned, small frown, apologetic, hesitant, troubled, fretting, tense, bite the lip, gaze drops",
+   "feeling": "worried, anxious, nervous, uneasy, apprehensive, troubled, tense, insecure"
+  },
+  {
+   "node": "n008",
+   "label": "laughing",
+   "file": "n008.png",
+   "valence": 0.8,
+   "arousal": 0.8,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. expression: head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking. symbols: none. hands: out of frame.",
+   "aliases": "laughing, giggling, hilarious, cracking up, joyful, amused, laughing out loud, burst out laughing, chuckle",
+   "feeling": "amused, joyful, delighted, giddy, elated, playful, merry, gleeful"
+  },
+  {
+   "node": "n009",
+   "label": "wink",
+   "file": "n009.png",
+   "valence": 0.6,
+   "arousal": 0.6,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. expression: one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright. symbols: none. hands: out of frame.",
+   "aliases": "wink, winking, playful, cheeky, flirt, teasing, knowing smile, sly, conspiratorial, hello, greeting",
+   "feeling": "playful, cheeky, flirtatious, teasing, mischievous, fond, amused, affectionate"
+  }
+ ],
+ "clips": [
+  {
+   "id": "loop__n001__v1",
+   "file": "loop__n001__v1.mp4",
+   "kind": "loop",
+   "start": "n001",
+   "end": "n001",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. motion: almost still; slow breathing, one unhurried blink, the faintest head movement; expression held. end expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "motion": "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held",
+    "end_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "stay neutral, keep the neutral look, remain, hold the expression, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet",
+   "index_docs": [
+    "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held; ends calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "stay neutral, keep the neutral look, remain, hold the expression, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "loop__n002__v1",
+   "file": "loop__n002__v1.mp4",
+   "kind": "loop",
+   "start": "n002",
+   "end": "n002",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted. motion: almost still; slow breathing, one unhurried blink, the faintest head movement; expression held. end expression: brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted",
+    "motion": "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held",
+    "end_expression": "brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "stay angry, keep the angry look, remain, hold the expression, angry, furious, mad, rage, hard stare, jaw set, lips pressed, glare, frustrated, annoyed, grumpy, cross",
+   "index_docs": [
+    "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held; ends brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted",
+    "brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted",
+    "stay angry, keep the angry look, remain, hold the expression, angry, furious, mad, rage, hard stare, jaw set, lips pressed, glare, frustrated, annoyed, grumpy, cross"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "loop__n003__v1",
+   "file": "loop__n003__v1.mp4",
+   "kind": "loop",
+   "start": "n003",
+   "end": "n003",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching. motion: almost still; slow breathing, one unhurried blink, the faintest head movement; expression held. end expression: one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching",
+    "motion": "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held",
+    "end_expression": "one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "stay puzzled, keep the puzzled look, remain, hold the expression, puzzled, confused, wondering, wonder, ponder, thinking, curious, questioning, unsure, hmm, eyebrow raised, head tilt, doubtful, skeptical, quizzical, narrow the eyes, frown in thought",
+   "index_docs": [
+    "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held; ends one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching",
+    "one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching",
+    "stay puzzled, keep the puzzled look, remain, hold the expression, puzzled, confused, wondering, wonder, ponder, thinking, curious, questioning, unsure, hmm, eyebrow raised, head tilt, doubtful, skeptical, quizzical, narrow the eyes, frown in thought"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "loop__n004__v1",
+   "file": "loop__n004__v1.mp4",
+   "kind": "loop",
+   "start": "n004",
+   "end": "n004",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised. motion: almost still; slow breathing, one unhurried blink, the faintest head movement; expression held. end expression: wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised",
+    "motion": "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held",
+    "end_expression": "wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "stay happy, keep the happy look, remain, hold the expression, happy, smiling, big smile, glad, pleased, cheerful, delighted, warm smile, beaming, grin, joyful, radiant",
+   "index_docs": [
+    "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held; ends wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised",
+    "wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised",
+    "stay happy, keep the happy look, remain, hold the expression, happy, smiling, big smile, glad, pleased, cheerful, delighted, warm smile, beaming, grin, joyful, radiant"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "loop__n005__v1",
+   "file": "loop__n005__v1.mp4",
+   "kind": "loop",
+   "start": "n005",
+   "end": "n005",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered. motion: almost still; slow breathing, one unhurried blink, the faintest head movement; expression held. end expression: eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered",
+    "motion": "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held",
+    "end_expression": "eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "stay crying, keep the crying look, remain, hold the expression, crying, cry, sob, sobbing, sob loudly, tears, tears roll down, weeping, weep, break down, sad, heartbroken, upset, miserable, tearful, eyes welling up, grief",
+   "index_docs": [
+    "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held; ends eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered",
+    "eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered",
+    "stay crying, keep the crying look, remain, hold the expression, crying, cry, sob, sobbing, sob loudly, tears, tears roll down, weeping, weep, break down, sad, heartbroken, upset, miserable, tearful, eyes welling up, grief"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "loop__n006__v1",
+   "file": "loop__n006__v1.mp4",
+   "kind": "loop",
+   "start": "n006",
+   "end": "n006",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised. motion: almost still; slow breathing, one unhurried blink, the faintest head movement; expression held. end expression: eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised",
+    "motion": "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held",
+    "end_expression": "eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "stay shocked, keep the shocked look, remain, hold the expression, shocked, surprised, startled, gasp, astonished, stunned, wide eyes, mouth open, taken aback, alarmed, jolt",
+   "index_docs": [
+    "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held; ends eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised",
+    "eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised",
+    "stay shocked, keep the shocked look, remain, hold the expression, shocked, surprised, startled, gasp, astonished, stunned, wide eyes, mouth open, taken aback, alarmed, jolt"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "loop__n007__v1",
+   "file": "loop__n007__v1.mp4",
+   "kind": "loop",
+   "start": "n007",
+   "end": "n007",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in. motion: almost still; slow breathing, one unhurried blink, the faintest head movement; expression held. end expression: brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in",
+    "motion": "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held",
+    "end_expression": "brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "stay worried, keep the worried look, remain, hold the expression, worried, anxious, nervous, uneasy, uneasy look, nervous glance, concerned, small frown, apologetic, hesitant, troubled, fretting, tense, bite the lip, gaze drops",
+   "index_docs": [
+    "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held; ends brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in",
+    "brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in",
+    "stay worried, keep the worried look, remain, hold the expression, worried, anxious, nervous, uneasy, uneasy look, nervous glance, concerned, small frown, apologetic, hesitant, troubled, fretting, tense, bite the lip, gaze drops"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "loop__n008__v1",
+   "file": "loop__n008__v1.mp4",
+   "kind": "loop",
+   "start": "n008",
+   "end": "n008",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking. motion: almost still; slow breathing, one unhurried blink, the faintest head movement; expression held. end expression: head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking",
+    "motion": "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held",
+    "end_expression": "head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "stay laughing, keep the laughing look, remain, hold the expression, laughing, giggling, hilarious, cracking up, joyful, amused, laughing out loud, burst out laughing, chuckle",
+   "index_docs": [
+    "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held; ends head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking",
+    "head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking",
+    "stay laughing, keep the laughing look, remain, hold the expression, laughing, giggling, hilarious, cracking up, joyful, amused, laughing out loud, burst out laughing, chuckle"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "loop__n009__v1",
+   "file": "loop__n009__v1.mp4",
+   "kind": "loop",
+   "start": "n009",
+   "end": "n009",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright. motion: almost still; slow breathing, one unhurried blink, the faintest head movement; expression held. end expression: one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright",
+    "motion": "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held",
+    "end_expression": "one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "stay wink, keep the wink look, remain, hold the expression, wink, winking, playful, cheeky, flirt, teasing, knowing smile, sly, conspiratorial, hello, greeting",
+   "index_docs": [
+    "almost still; slow breathing, one unhurried blink, the faintest head movement; expression held; ends one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright",
+    "one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright",
+    "stay wink, keep the wink look, remain, hold the expression, wink, winking, playful, cheeky, flirt, teasing, knowing smile, sly, conspiratorial, hello, greeting"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "edge__n001__n002__v1",
+   "file": "edge__n001__n002__v1.mp4",
+   "kind": "edge",
+   "start": "n001",
+   "end": "n002",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. motion: slowly, over three seconds, brows pull down and together, the stare hardens, the jaw sets, lips press thin, chin lifts. end expression: brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "motion": "slowly, over three seconds, brows pull down and together, the stare hardens, the jaw sets, lips press thin, chin lifts",
+    "end_expression": "brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "angry, furious, mad, rage, hard stare, jaw set, lips pressed, glare, frustrated, annoyed, grumpy, cross, becoming angry",
+   "index_docs": [
+    "brows pull down and together, the stare hardens, the jaw sets, lips press thin, chin lifts; ends brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted",
+    "brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted",
+    "angry, furious, mad, rage, hard stare, jaw set, lips pressed, glare, frustrated, annoyed, grumpy, cross, becoming angry"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "edge__n002__n001__v1",
+   "file": "edge__n002__n001__v1.mp4",
+   "kind": "edge",
+   "start": "n002",
+   "end": "n001",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted. motion: brows level out, the jaw loosens, lips soften, the gaze eases back to calm. end expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "brows drawn down and together, hard direct stare, jaw set, lips pressed thin, chin lifted",
+    "motion": "brows level out, the jaw loosens, lips soften, the gaze eases back to calm",
+    "end_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "calm down, relax, settle, stop being angry, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet",
+   "index_docs": [
+    "brows level out, the jaw loosens, lips soften, the gaze eases back to calm; ends calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm down, relax, settle, stop being angry, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet"
+   ],
+   "origin": "reversed"
+  },
+  {
+   "id": "edge__n001__n003__v1",
+   "file": "edge__n001__n003__v1.mp4",
+   "kind": "edge",
+   "start": "n001",
+   "end": "n003",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. motion: slowly, over three seconds, one eyebrow lifts, the head tilts, lips purse, the eyes narrow and search. end expression: one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "motion": "slowly, over three seconds, one eyebrow lifts, the head tilts, lips purse, the eyes narrow and search",
+    "end_expression": "one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "puzzled, confused, wondering, wonder, ponder, thinking, curious, questioning, unsure, hmm, eyebrow raised, head tilt, doubtful, skeptical, quizzical, narrow the eyes, frown in thought, becoming puzzled",
+   "index_docs": [
+    "one eyebrow lifts, the head tilts, lips purse, the eyes narrow and search; ends one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching",
+    "one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching",
+    "puzzled, confused, wondering, wonder, ponder, thinking, curious, questioning, unsure, hmm, eyebrow raised, head tilt, doubtful, skeptical, quizzical, narrow the eyes, frown in thought, becoming puzzled"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "edge__n003__n001__v1",
+   "file": "edge__n003__n001__v1.mp4",
+   "kind": "edge",
+   "start": "n003",
+   "end": "n001",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching. motion: the eyebrow settles, the head straightens, lips relax, the gaze returns to calm. end expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "one eyebrow raised, head tilted a little, lips pursed, eyes narrowed and searching",
+    "motion": "the eyebrow settles, the head straightens, lips relax, the gaze returns to calm",
+    "end_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "calm down, relax, settle, stop being puzzled, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet",
+   "index_docs": [
+    "the eyebrow settles, the head straightens, lips relax, the gaze returns to calm; ends calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm down, relax, settle, stop being puzzled, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet"
+   ],
+   "origin": "reversed"
+  },
+  {
+   "id": "edge__n001__n004__v1",
+   "file": "edge__n001__n004__v1.mp4",
+   "kind": "edge",
+   "start": "n001",
+   "end": "n004",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. motion: slowly, over three seconds, the mouth opens into a broad warm smile, the eyes brighten and crinkle, cheeks lift, the head rises a little. end expression: wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "motion": "slowly, over three seconds, the mouth opens into a broad warm smile, the eyes brighten and crinkle, cheeks lift, the head rises a little",
+    "end_expression": "wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "happy, smiling, big smile, glad, pleased, cheerful, delighted, warm smile, beaming, grin, joyful, radiant, becoming happy",
+   "index_docs": [
+    "the mouth opens into a broad warm smile, the eyes brighten and crinkle, cheeks lift, the head rises a little; ends wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised",
+    "wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised",
+    "happy, smiling, big smile, glad, pleased, cheerful, delighted, warm smile, beaming, grin, joyful, radiant, becoming happy"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "edge__n004__n001__v1",
+   "file": "edge__n004__n001__v1.mp4",
+   "kind": "edge",
+   "start": "n004",
+   "end": "n001",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised. motion: the smile softens and closes, the eyes settle, the face returns to calm. end expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "wide warm smile showing teeth, eyes crinkled and bright, cheeks lifted, head slightly raised",
+    "motion": "the smile softens and closes, the eyes settle, the face returns to calm",
+    "end_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "calm down, relax, settle, stop being happy, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet",
+   "index_docs": [
+    "the smile softens and closes, the eyes settle, the face returns to calm; ends calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm down, relax, settle, stop being happy, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet"
+   ],
+   "origin": "reversed"
+  },
+  {
+   "id": "edge__n001__n005__v1",
+   "file": "edge__n001__n005__v1.mp4",
+   "kind": "edge",
+   "start": "n001",
+   "end": "n005",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. motion: slowly, over three seconds, the brows draw up in the middle, the eyes fill and spill over, the lips tremble and part, the chin puckers. end expression: eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "motion": "slowly, over three seconds, the brows draw up in the middle, the eyes fill and spill over, the lips tremble and part, the chin puckers",
+    "end_expression": "eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "crying, cry, sob, sobbing, sob loudly, tears, tears roll down, weeping, weep, break down, sad, heartbroken, upset, miserable, tearful, eyes welling up, grief, becoming crying",
+   "index_docs": [
+    "the brows draw up in the middle, the eyes fill and spill over, the lips tremble and part, the chin puckers; ends eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered",
+    "eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered",
+    "crying, cry, sob, sobbing, sob loudly, tears, tears roll down, weeping, weep, break down, sad, heartbroken, upset, miserable, tearful, eyes welling up, grief, becoming crying"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "edge__n005__n001__v1",
+   "file": "edge__n005__n001__v1.mp4",
+   "kind": "edge",
+   "start": "n005",
+   "end": "n001",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered. motion: the tears stop, the brows level, the lips close, the face settles back to calm. end expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "eyes glossy and brimming with tears, brows drawn up in the middle, lips trembling and parted, chin puckered",
+    "motion": "the tears stop, the brows level, the lips close, the face settles back to calm",
+    "end_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "calm down, relax, settle, stop being crying, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet",
+   "index_docs": [
+    "the tears stop, the brows level, the lips close, the face settles back to calm; ends calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm down, relax, settle, stop being crying, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet"
+   ],
+   "origin": "reversed"
+  },
+  {
+   "id": "edge__n001__n006__v1",
+   "file": "edge__n001__n006__v1.mp4",
+   "kind": "edge",
+   "start": "n001",
+   "end": "n006",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. motion: slowly, over three seconds, the eyes fly wide, brows shoot up, the lips part, the chin draws back, the shoulders rise. end expression: eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "motion": "slowly, over three seconds, the eyes fly wide, brows shoot up, the lips part, the chin draws back, the shoulders rise",
+    "end_expression": "eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "shocked, surprised, startled, gasp, astonished, stunned, wide eyes, mouth open, taken aback, alarmed, jolt, becoming shocked",
+   "index_docs": [
+    "the eyes fly wide, brows shoot up, the lips part, the chin draws back, the shoulders rise; ends eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised",
+    "eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised",
+    "shocked, surprised, startled, gasp, astonished, stunned, wide eyes, mouth open, taken aback, alarmed, jolt, becoming shocked"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "edge__n006__n001__v1",
+   "file": "edge__n006__n001__v1.mp4",
+   "kind": "edge",
+   "start": "n006",
+   "end": "n001",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised. motion: the eyes return to normal size, the brows lower, the lips close, the shoulders drop, the face settles. end expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised",
+    "motion": "the eyes return to normal size, the brows lower, the lips close, the shoulders drop, the face settles",
+    "end_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "calm down, relax, settle, stop being shocked, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet",
+   "index_docs": [
+    "the eyes return to normal size, the brows lower, the lips close, the shoulders drop, the face settles; ends calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm down, relax, settle, stop being shocked, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet"
+   ],
+   "origin": "reversed"
+  },
+  {
+   "id": "edge__n001__n007__v1",
+   "file": "edge__n001__n007__v1.mp4",
+   "kind": "edge",
+   "start": "n001",
+   "end": "n007",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. motion: slowly, over three seconds, the brows knit and lift at the inner ends, the gaze drops and wavers, the lips press together, the shoulders draw in. end expression: brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "motion": "slowly, over three seconds, the brows knit and lift at the inner ends, the gaze drops and wavers, the lips press together, the shoulders draw in",
+    "end_expression": "brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "worried, anxious, nervous, uneasy, uneasy look, nervous glance, concerned, small frown, apologetic, hesitant, troubled, fretting, tense, bite the lip, gaze drops, becoming worried",
+   "index_docs": [
+    "the brows knit and lift at the inner ends, the gaze drops and wavers, the lips press together, the shoulders draw in; ends brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in",
+    "brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in",
+    "worried, anxious, nervous, uneasy, uneasy look, nervous glance, concerned, small frown, apologetic, hesitant, troubled, fretting, tense, bite the lip, gaze drops, becoming worried"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "edge__n007__n001__v1",
+   "file": "edge__n007__n001__v1.mp4",
+   "kind": "edge",
+   "start": "n007",
+   "end": "n001",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in. motion: the brows level out, the gaze lifts and steadies, the lips relax, the shoulders open back to calm. end expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "brows knitted and raised at the inner ends, gaze lowered and unsteady, lips pressed together, shoulders drawn in",
+    "motion": "the brows level out, the gaze lifts and steadies, the lips relax, the shoulders open back to calm",
+    "end_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "calm down, relax, settle, stop being worried, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet",
+   "index_docs": [
+    "the brows level out, the gaze lifts and steadies, the lips relax, the shoulders open back to calm; ends calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm down, relax, settle, stop being worried, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet"
+   ],
+   "origin": "reversed"
+  },
+  {
+   "id": "edge__n001__n008__v1",
+   "file": "edge__n001__n008__v1.mp4",
+   "kind": "edge",
+   "start": "n001",
+   "end": "n008",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. motion: slowly, over three seconds, the head tips back, the eyes squeeze shut, the smile bursts into an open laugh, the shoulders shake. end expression: head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "motion": "slowly, over three seconds, the head tips back, the eyes squeeze shut, the smile bursts into an open laugh, the shoulders shake",
+    "end_expression": "head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "laughing, giggling, hilarious, cracking up, joyful, amused, laughing out loud, burst out laughing, chuckle, becoming laughing",
+   "index_docs": [
+    "the head tips back, the eyes squeeze shut, the smile bursts into an open laugh, the shoulders shake; ends head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking",
+    "head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking",
+    "laughing, giggling, hilarious, cracking up, joyful, amused, laughing out loud, burst out laughing, chuckle, becoming laughing"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "edge__n008__n001__v1",
+   "file": "edge__n008__n001__v1.mp4",
+   "kind": "edge",
+   "start": "n008",
+   "end": "n001",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking. motion: the laugh settles, the eyes open, the head comes level, the face returns to calm. end expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "head tipped back a little, eyes squeezed shut in laughter, wide open laughing mouth, shoulders shaking",
+    "motion": "the laugh settles, the eyes open, the head comes level, the face returns to calm",
+    "end_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "calm down, relax, settle, stop being laughing, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet",
+   "index_docs": [
+    "the laugh settles, the eyes open, the head comes level, the face returns to calm; ends calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm down, relax, settle, stop being laughing, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet"
+   ],
+   "origin": "reversed"
+  },
+  {
+   "id": "edge__n001__n009__v1",
+   "file": "edge__n001__n009__v1.mp4",
+   "kind": "edge",
+   "start": "n001",
+   "end": "n009",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. motion: slowly, over three seconds, one eye closes in a wink, a small smile spreads, the head tilts a little. end expression: one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "motion": "slowly, over three seconds, one eye closes in a wink, a small smile spreads, the head tilts a little",
+    "end_expression": "one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "wink, winking, playful, cheeky, flirt, teasing, knowing smile, sly, conspiratorial, hello, greeting, becoming wink",
+   "index_docs": [
+    "one eye closes in a wink, a small smile spreads, the head tilts a little; ends one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright",
+    "one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright",
+    "wink, winking, playful, cheeky, flirt, teasing, knowing smile, sly, conspiratorial, hello, greeting, becoming wink"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "edge__n009__n001__v1",
+   "file": "edge__n009__n001__v1.mp4",
+   "kind": "edge",
+   "start": "n009",
+   "end": "n001",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright. motion: the eye opens, the smile fades to calm, the head straightens. end expression: calm face, lips closed and relaxed, soft steady gaze, shoulders at ease. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright",
+    "motion": "the eye opens, the smile fades to calm, the head straightens",
+    "end_expression": "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "calm down, relax, settle, stop being wink, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet",
+   "index_docs": [
+    "the eye opens, the smile fades to calm, the head straightens; ends calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm face, lips closed and relaxed, soft steady gaze, shoulders at ease",
+    "calm down, relax, settle, stop being wink, return to calm, neutral, calm, relaxed, still, composed, listening, attentive, resting face, waiting, quiet"
+   ],
+   "origin": "reversed"
+  },
+  {
+   "id": "edge__n006__n009__v1",
+   "file": "edge__n006__n009__v1.mp4",
+   "kind": "edge",
+   "start": "n006",
+   "end": "n009",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised. motion: the wide eyes relax and the brows lower, one eye closes in a wink, a small knowing smile spreads, the head tilts a little. end expression: one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised",
+    "motion": "the wide eyes relax and the brows lower, one eye closes in a wink, a small knowing smile spreads, the head tilts a little",
+    "end_expression": "one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "from shock to a wink, relief into a wink, playful after a fright, wink, winking, cheeky, knowing smile, teasing, it was nothing",
+   "index_docs": [
+    "the wide eyes relax and the brows lower, one eye closes in a wink, a small knowing smile spreads, the head tilts a little; ends one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright",
+    "one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright",
+    "from shock to a wink, relief into a wink, playful after a fright, wink, winking, cheeky, knowing smile, teasing, it was nothing"
+   ],
+   "origin": "recorded"
+  },
+  {
+   "id": "edge__n009__n006__v1",
+   "file": "edge__n009__n006__v1.mp4",
+   "kind": "edge",
+   "start": "n009",
+   "end": "n006",
+   "duration_s": 3.06,
+   "description": "subject: a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left. start expression: one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright. motion: the winking eye opens wide, the smile drops, the brows shoot up, the lips part, the chin draws back. end expression: eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised. symbols: none. hands at end: out of frame.",
+   "fields": {
+    "subject": "a young woman resembling Joi as played by Ana de Armas: dark brown hair with a straight fringe over the brows and loose strands beside the face, the rest tied back; large dark eyes, full lips; a high-collared jacket of gold, black and red brocade; head and shoulders, centered, a dim blurred room behind her, soft light from the left",
+    "start_expression": "one eye closed in a wink, a small knowing smile, head tilted slightly, the other eye bright",
+    "motion": "the winking eye opens wide, the smile drops, the brows shoot up, the lips part, the chin draws back",
+    "end_expression": "eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised",
+    "symbols": "none",
+    "hands": "out of frame"
+   },
+   "aliases": "from a wink to shock, caught out, startled mid-joke, surprised, shocked, gasp, eyes wide, taken aback",
+   "index_docs": [
+    "the winking eye opens wide, the smile drops, the brows shoot up, the lips part, the chin draws back; ends eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised",
+    "eyes wide open, brows high, lips parted, chin drawn back, shoulders slightly raised",
+    "from a wink to shock, caught out, startled mid-joke, surprised, shocked, gasp, eyes wide, taken aback"
+   ],
+   "origin": "reversed"
+  }
+ ]
+}
