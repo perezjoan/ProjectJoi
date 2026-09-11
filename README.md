@@ -19,7 +19,7 @@ Most chatbots pick a face per message. Joi does not. Each turn her language mode
 how she **feels** about the exchange, what her **face** does, and what she **replies**. The feeling is turned into a
 point in a three-dimensional emotional space by a lexicon, not by the model. That point moves her **mood**, a state
 that decays over minutes and that she reads back at the start of every turn, so she reports against something she does
-not control. Her face is a small **graph of video clips**: still frames (painted samples of the same space) joined by
+not control. What she says is conditionned by her mood. Her face is a small **graph of video clips**: still frames (painted samples of the same space) joined by
 transitions, and the body walks between them, or drifts toward whatever the mood is nearest to when she has nothing
 in particular to show. Every interaction is written to a **memory store** with the time and the mood she was in, and
 recalled when it is relevant. When you switch her off, her self is saved; when you switch her back on she is told
