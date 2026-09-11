@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "projectjoi"
+version = "3.0.1"
+description = "A local companion with a mood, a body made of video clips, and a memory with timestamps."
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.110", "uvicorn[standard]>=0.29", "chromadb>=0.5", "sentence-transformers>=3.0", "numpy",
+  "transformers>=4.51", "accelerate", "bitsandbytes>=0.45",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["embodied3*"]
+
+[tool.setuptools.package-data]
+"embodied3.renderer" = ["static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

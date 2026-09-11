@@ -1,0 +1,10 @@
+# Install torch first, for your CUDA version (see README), then: pip install -r requirements.txt
+fastapi>=0.110
+uvicorn[standard]>=0.29
+chromadb>=0.5
+sentence-transformers>=3.0
+numpy
+transformers>=4.51
+accelerate
+bitsandbytes>=0.45
+pytest
