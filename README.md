@@ -158,3 +158,7 @@ tests/               pytest, no models needed
 Painting new expressions where the mood keeps going and no sample exists; direct transitions grown from the
 travelled pairs; a larger brain; perception (webcam, microphone) so her reactions are measured against the world
 rather than her own words; consolidation while idle.
+
+## Developer
+
+Project Joi is developed by [Joan Perez](https://orcid.org/0000-0003-3003-0895), founder of **Urban Geo Analytics** — an independent research and consulting practice focused on geospatial modeling, AI for cities, and open-source urban analytics. 🌐 [urbangeoanalytics.com](https://urbangeoanalytics.com/)
