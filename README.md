@@ -28,6 +28,15 @@ how long she was away, and reacts.
 Feeling and face are kept apart on purpose. The distance between them is measured and logged: a brave face is a
 valid move, and the gap is information, not an error.
 
+<p align="center">
+  <img src="docs/joi_wink.gif" width="300" alt="Joi winking">&nbsp;&nbsp;
+  <img src="docs/joi_crying.gif" width="300" alt="Joi crying">
+</p>
+<p align="center"><sub>Left: "you look beautiful today." Right: asked to cry. Both are clips from her library, chosen by what her face was asked to do.</sub></p>
+
+<p align="center"><img src="docs/joi_graph.gif" width="420" alt="the mood and the body in the VAD space"></p>
+<p align="center"><sub>The teal dot is how she feels, the orange ring is the face she shows. The gap is measured, not hidden.</sub></p>
+
 ## How it works, briefly
 
 - **The space.** Three axes from the NRC VAD lexicon: valence (unpleasant to pleasant), arousal (calm to energised),
